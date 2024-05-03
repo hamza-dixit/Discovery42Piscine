@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Mio CV</title>
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="profile-card"><h1 >Cv-HelRhafli</h1>
+
+<button onclick="mostraParte('parte1')">Chi siamo?</button>
+<button onclick="mostraParte('parte2')">Esperienze Professionali</button>
+<button onclick="mostraParte('parte3')">Contatti</button>
+</div>
+<section id="parte1" class="hidden">
+
+
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+          margin: 0;
+          padding: 0;
+        }
+        .profile-card {
+          max-width: 600px;
+          margin: 50px auto;
+          background-color: #ffffff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+        }
+        .profile-title {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+        .profile-table {
+          display: none;
+        }
+        .profile-image {
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+          margin-bottom: 20px;
+        }
+        .profile-login {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .profile-description {
+          font-style: italic;
+          margin-bottom: 20px;
+        }
+        .social-icons {
+          margin-bottom: 20px;
+        }
+        .social-icons img {
+          width: 30px;
+          margin: 0 5px;
+        }
+        .contact-button {
+          padding: 10px 20px;
+          font-size: 16px;
+          border: none;
+          border-radius: 5px;
+          background-color: #000000;
+          color: #ffffff;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .contact-button:hover {
+          background-color: #ff0000;
+        }
+      </style>
+
+
+
+<div class="profile-card">
+  <div class="profile-title">Hel-Rhafli</div>
+  <table class="profile-table">
+    
+    
+  </table>
+  <img class="profile-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQwAAAC8CAMAAAC672BgAAAAYFBMVEUAAAD////39/d6enqysrLw8PDd3d3q6uo2NjaSkpK2trZeXl7X19fW1tbKysrDw8O9vb0VFRVAQEAXFxdBQUEQEBDg4OA7Ozurq6seHh5oaGiAgIDt7e2kpKRVVVUxMTG32YG0AAAD30lEQVR4nO3d23LaQBCEYUEMOI7PJs45ef+3jJ3ETAtWq5nK7uyi6f9e0vJVU+ULMMNQvdu1rdVd8jY3xtusP6+MF+zqW9ysjN2m77M13ubyvfXBm7OxsGLsh/4wilkYMfZDfxjlLGwYLxbdYRS0MGG8WvSGUdLCgvE49IdR1MKAsR/6wyhrocd4HPrDKGyhxniz6AmjtIUW42DREUZxCyWGWPSDUd5ChwEW3WBUsFBhoEUvGDUsNBgji04wqlgoMMYWfWDUsZjHOLLoAqOSxSzGsUUPGLUs5jBOLDrAqGYxg3Fq0R6jnkUeI2HRHKOiRRYjZdEao6ZFDiNp0RijqkUGI23RFqOuxTTGhEVTjMoWkxhTFi0xaltMYUxaNMSobjGBMW3RDqO+RRrjU+aCVhgOFkmMzC6aYXhYpDByu2iF4WKRwMjuohGGj8UpRn4XbTCcLE4w5ixaYHhZHGPMWjTAcLM4wpi38MfwsxhjKCzcMRwtRhgaC28MTwvEUFk4Y7haAIbOwhfD10IwlBauGM4WBwythSeGt8UbhtrCEcPd4h+G3sIPw9/iL4bBwg2jgcUfDIuFF4bZIv09AVtbo4UTRhOL4dlo4YPRxmLY7o0XeGA0shi+WC+4sx70xnymVhbm7q0HfTY/ghYSLSRaSNe0OMRdSNyFRAuJFtJyLbbmRyzXgruQuAvp2vwIWki0kGgh0UKihUQLiRYSLSRaSLSQaCHRQqKFRAuJFhItJFpItJBoIdFCooVEC4kWEi0kWki0kGgh0UJaroX9c7/LtbDvwvo7AOdjYd/Fci24C4m7kBx2cV/hdWpy2MWt9RG7r+8q9+0pddAr60HNn117Gr5bn+HQZeqoz9a7XBgtHnbDrsar+c+SGOa385XN4uN6Q4yDxYoYYkEMsCAGWBADLIgBFsQAC2KABTHAghhgER4DLaJjjCyCY4wtYmM8jC1CYxztIjTGiUVgjOP3yCowxuku4mIkdhEWI7WLqBjJXQTFSO8iJsbELkJiTFoExJi2iIeRsQiHkbOIhpG1CIaRt4iFMWMRCmPOIhLGrEUgjHmLOBgKizAYGosoGE8aixeMjf2s1SuNodrFK8aPi9qZ/xl6aQzdLir8Lnyin9ZXURhDuQsfjA/WV1EWQ7uLCBjqXQTA0O9i+RiGXSwew7KLpWPYLBaOYbM4Jwzz903urH9cnxHGMiIGRAyIGBAxIGJAxICIAREDIgZEDIgYEDEgYkDEgIgBEQMiBkQMiBgQMSBiQMSAiAERAyIGRAyIGBAxIGJAxICIAREDIgZEDIgYEDEgYkDEgH5udrbWvxqd9DebH4JWBWa3KQAAAABJRU5ErkJggg==" alt="Foto Profilo">
+  <div class="profile-login">Leonardo</div>
+  <div class="profile-description">Web Developer</div>
+  <div class="social-icons">
+
+
+  </div>
+  <a class="contact-button" href="https://it.linkedin.com/in/hamza-el-rhafil">Contatto</a>
+</div>
+
+
+</section>
+
+
+<section id="parte2" class="hidden">
+
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #880a0a;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://static.vecteezy.com/ti/vettori-gratis/t1/6915117-sfondo-liquido-dipinto-a-mano-in-stile-minimalista-gratuito-vettoriale.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-attachment: fixed;
+  }
+  .container {
+    margin-top: 50px;
+    text-align: center;
+    padding: 50px 0;
+    background-color: rga(255, 255, 255, 0.8);
+  }
+  h1 {
+    color: #000000;
+  }
+  h2 {
+    color: #000000;
+  }
+  .section {
+    margin-bottom: 50px;
+  }
+</style>
+
+
+
+<div class="container profile-card">
+  <header class="section">
+    <h1>HAMZA LEONARDO</h1>
+  </header>
+
+  <section class="section">
+    <h2>Esperienza Lavorativa</h2>
+    <p>Manager di stand itinerante</p>
+    <p>Tutor Lingue</p>
+    <p>Mediatore Interculturale</p>
+    <p>Traduttore</p>
+  </section>
+
+  <section class="section">
+    <h2>Istruzione</h2>
+    <p>Laurea Magistrale - Universita' degli studi di Firenze</p>
+    <p> <a href="https://www.clm-36.unifi.it/"> Lingue e civilta' dell'oriente antico e moderno </a>
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Skills</h2>
+      
+            <p>Comunicazipone</p>
+            <p>Lavoro di squadra</p>
+            <p>Passione</p>
+  </section>
+
+  <section class="section">
+    <h2>Lingue</h2>
+      
+            <p>Italiano</p>
+            <p>Arabo</p>
+            <p>Spagnolo</p>
+            <p> Inglese</p>
+  </section>
+
+</section>
+
+
+
+
+<section id="parte3" class="hidden">
+    <div  class="profile-card">
+  <ul>
+    <p>Email: leonardo.rossi@gmail.com</p>
+    <p>Tel: +39 1234567890 </p>
+    <p><a href="https://it.linkedin.com"> Linkedin        
+    </a></p>
+  </ul></div>
+</section>
+
+
+
+<script>
+function mostraParte(id) {
+  // Nascondi tutte le sezioni
+  document.getElementById('parte1').classList.add('hidden');
+  document.getElementById('parte2').classList.add('hidden');
+  document.getElementById('parte3').classList.add('hidden');
+  // Mostra la sezione specificata
+  document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
