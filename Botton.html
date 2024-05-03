@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il Mio CV</title>
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<h1>Cv-HelRhafli</h1>
+
+<button onclick="mostraParte('parte1')">Chi siamo?</button>
+<button onclick="mostraParte('parte2')">Esperienze Professionali</button>
+<button onclick="mostraParte('parte3')">Contatti</button>
+
+<section id="parte1" class="hidden">
+  <h2>Parte 1: Foto e Contenuto Semplice</h2>
+  <img src="foto.jpg" alt="La mia foto">
+  <p>Descrizione della persona...</p>
+</section>
+
+<section id="parte2" class="hidden">
+  <h2>Parte 2: Esperienze Professionali</h2>
+  <ul>
+    <li>Nome dell'azienda - Posizione (Anno - Anno)</li>
+    <li>Descrizione delle mansioni svolte</li>
+    <!-- Aggiungi altre esperienze professionali se necessario -->
+  </ul>
+</section>
+
+<section id="parte3" class="hidden">
+  <h2>Parte 3: Contatti</h2>
+  <ul>
+    <li>Email: email@example.com</li>
+    <li>Telefono: 0123456789</li>
+    <li>Sito Web: www.example.com</li>
+  </ul>
+</section>
+
+<script>
+function mostraParte(id) {
+  // Nascondi tutte le sezioni
+  document.getElementById('parte1').classList.add('hidden');
+  document.getElementById('parte2').classList.add('hidden');
+  document.getElementById('parte3').classList.add('hidden');
+  // Mostra la sezione specificata
+  document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
