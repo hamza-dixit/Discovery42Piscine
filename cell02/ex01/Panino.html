@@ -1,0 +1,93 @@
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panino SNCF</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ddd4d4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(126, 49, 49, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  .sandwich {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ingredient {
+    margin: 5px 0;
+  }
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  option {
+    font-size: 16px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #3a01c0;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Menu del giorno</h1>
+  <div class="sandwich">
+    <div class="ingredient">
+      <label for="bread">Pane:</label>
+      <select id="bread">
+        <option value="white">Bianco</option>
+        <option value="whole-grain">Integrale</option>
+        <option value="baguette">Baguette</option>
+      </select>
+    </div>
+    <div class="ingredient">
+      <label for="filling">Ripieno:</label>
+      <select id="filling">
+        <option value="ham">Prosciutto</option>
+        <option value="cheese">Formaggio</option>
+        <option value="tomato">Pomodoro</option>
+        <option value="lettuce">Lattuga</option>
+      </select>
+    </div>
+    <div class="ingredient">
+      <label for="sauce">Salsa:</label>
+      <select id="sauce">
+        <option value="mayo">Maionese</option>
+        <option value="mustard">Senape</option>
+        <option value="ketchup">Ketchup</option>
+      </select>
+    </div>
+    <button>Ordina</button>
+  </div>
+</div>
+
+</body>
+</html>
+}

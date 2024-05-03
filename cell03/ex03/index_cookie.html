@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestore di Attività</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  #ft_list {
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .task {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id="ft_list"></div>
+<button id="newTaskBtn">New</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const ftList = document.getElementById("ft_list");
+  const newTaskBtn = document.getElementById("newTaskBtn");
+
+  // Carica le attività dalla memoria locale (cookie)
+  loadTasks();
+
+  // Aggiungi un listener per il pulsante "New"
+  newTaskBtn.addEventListener("click", function() {
+    const taskText = prompt("Inserisci una nuova attività:");
+    if (taskText !== null && taskText.trim() !== "") {
+      addTask(taskText);
+    }
+  });
+
+  // Aggiungi un listener per le attività
+  ftList.addEventListener("click", function(event) {
+    const target = event.target;
+    if (target.classList.contains("task")) {
+      const confirmed = confirm("Vuoi davvero rimuovere questa attività?");
+      if (confirmed) {
+        removeTask(target);
+      }
+    }
+  });
+
+  // Funzione per aggiungere una nuova attività
+  function addTask(text) {
+    const task = document.createElement("div");
+    task.classList.add("task");
+    task.textContent = text;
+    ftList.insertBefore(task, ftList.firstChild);
+    saveTasks(); // Salva le attività nella memoria locale (cookie)
+  }
+
+  // Funzione per rimuovere un'attività
+  function removeTask(task) {
+    task.parentNode.removeChild(task);
+    saveTasks(); // Salva le attività nella memoria locale (cookie)
+  }
+
+  // Funzione per salvare le attività nella memoria locale (cookie)
+  function saveTasks() {
+    const tasks = [];
+    const taskElements = document.querySelectorAll(".task");
+    taskElements.forEach(function(taskElement) {
+      tasks.push(taskElement.textContent);
+    });
+    document.cookie = "tasks=" + JSON.stringify(tasks);
+  }
+
+  // Funzione per caricare le attività dalla memoria locale (cookie)
+  function loadTasks() {
+    const cookieValue = document.cookie.replace(/(?:(?:^|.;\s)tasks\s*=\s*([^;]).$)|^.*$/, "$1");
+    if (cookieValue) {
+      const tasks = JSON.parse(cookieValue);
+      tasks.forEach(function(task) {
+        addTask(task);
+      });
+    }
+  }
+});
+</script>
+
+</body>
+</html>

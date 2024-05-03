@@ -1,0 +1,83 @@
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balloon</title>
+<style>
+  #balloon {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+    cursor: pointer;
+  }
+
+  #balloon:hover {
+    width: calc(200px - 5px);
+    height: calc(200px - 5px);
+  }
+
+  .explosion {
+    animation: explode 0.5s forwards;
+  }
+
+  @keyframes explode {
+    from {
+      width: 420px;
+      height: 420px;
+    }
+    to {
+      width: 200px;
+      height: 200px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="balloon"></div>
+
+<script>
+  const balloon = document.getElementById("balloon");
+  let size = 200;
+  let colorIndex = 0;
+  const colors = ["red", "green", "blue"];
+
+  balloon.addEventListener("click", function() {
+    size += 10;
+    if (size > 420) {
+      size = 200;
+    } else {
+      balloon.style.width = size + "px";
+      balloon.style.height = size + "px";
+    }
+    balloon.style.backgroundColor = colors[colorIndex];
+    colorIndex = (colorIndex + 1) % colors.length;
+  });
+
+  balloon.addEventListener("mouseover", function() {
+    size -= 5;
+    if (size < 200) {
+      size = 200;
+    }
+    balloon.style.width = size + "px";
+    balloon.style.height = size + "px";
+    colorIndex = (colorIndex - 1 + colors.length) % colors.length; // Cambia il colore nell'ordine opposto
+    balloon.style.backgroundColor = colors[colorIndex];
+  });
+
+  balloon.addEventListener("mouseout", function() {
+    size -= 5;
+    if (size < 200) {
+      size = 200;
+    }
+    balloon.style.width = size + "px";
+    balloon.style.height = size + "px";
+    colorIndex = (colorIndex + 1) % colors.length;
+    balloon.style.backgroundColor = colors[colorIndex];
+  });
+</script>
+
+</body>
+</html>
