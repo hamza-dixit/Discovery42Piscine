@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hel-Rhafli</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #880a0a;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://static.vecteezy.com/ti/vettori-gratis/t1/6915117-sfondo-liquido-dipinto-a-mano-in-stile-minimalista-gratuito-vettoriale.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-attachment: fixed;
+  }
+  .container {
+    margin-top: 50px;
+    text-align: center;
+    padding: 50px 0;
+    background-color: rga(255, 255, 255, 0.8);
+  }
+  h1 {
+    color: #000000;
+  }
+  h2 {
+    color: #000000;
+  }
+  .section {
+    margin-bottom: 50px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="section">
+    <h1>Hel-Rhafli</h1>
+    <p>Hamza Leonardo</p>
+  </header>
+
+  <section class="section">
+    <h2>Esperienza Lavorativa</h2>
+    <p>Les Savons F - Manager di stand itinerante</p>
+    <p>Esperto nella vendita al dettaglio di prodotti francesi di alta qualità come creme al latte d'asina e saponi di Marsiglia. Appassionato di promuovere uno stile di vita sano e sostenibile attraverso la bellezza e il benessere.
+      Determinato a offrire un'esperienza autentica e soddisfacente ai clienti. Disponibile per opportunità di collaborazione dinamica e innovativa nel settore della vendita al dettaglio</p>
+  </section>
+
+  <section class="section">
+    <h2>Istruzione</h2>
+    <p>Laurea Magistrale - Universita' degli studi di Firenze</p>
+    <p>Lingue e culture per la comunicazione e la cooperazione internazionale</p>
+  </section>
+
+  <section class="section">
+    <h2>Lingue</h2>
+   
+    <div> 
+        <ul>
+            <li>Italiano</li>
+            <li>Arabo</li>
+            <li>Spagnolo</li>
+            <li> Inglese</li>
+    </ul>
+   </div>
+      
+  </section>
+
+  <section class="section">
+    <h2>Contatti</h2>
+    <p>Email: hamza.elrhafil@gmail.com</p>
+    <p>Telefono: +39 3392758243</p>
+    <p>Sito Web: https://it.linkedin.com/in/hamza-el-rhafil</p>
+  </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
